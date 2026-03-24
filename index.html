@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="png" href="favicon1.3.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar p-3 shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Joan Crisel Gutierrez</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--PROFILE PICTURE AND BRIEF INTRODUCTION-->
+    <section class="hero container-fluid d-flex flex-column align-items-center justify-content-center" id="about">
+        <img src="My Selfie3.jpg" alt="Profile Pic" class="img-fluid">
+        <div class="shadow-dance-container">
+            <h1 class="shadow-dance-text">Hi, I'm Joan! <img src="cat1.gif" alt="GIF Cat 1"></h1>
+        </div>        
+        <div class="neon-container">
+            <h1 class="neon-text">Aspiring CS Student & UI Designer | Lover of cute things (˶ᵔ ᵕ ᵔ˶)</h1>
+        </div>
+        <button class="glow-on-hover" type="button" style="display: block; margin: 0 auto;">
+            <a class="nav-link" href="#achievements">Know More About Me!</a>
+          </button>
+    </section>
+
+    <!--ACHIEVEMENTS-->
+    <section class="container my-2" id="achievements">
+        <img src="cat.gif" alt="GIF Cat1" class="gif-container">
+        <div class="spin-container">
+            <h2 class="text-center spin-text">MY ACHIEVEMENTS</h2>
+        </div>
+        <p class="text-center neon-text">Here's a little about me: My education, interests, and achievements!</p>
+
+        <!--EDUCATION-->
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5><img src="Girl Coding.gif" alt="GIF Girl Coding" class="gif-container2">I am currently studying at
+                    <b>City College of Angeles</b></h5>
+                <img src="CCA School.jpg" alt="CCA School" class="school">
+                <p class="font1 neon-text" style="margin-bottom: 5%;">I'm pursuing <b>Computer Science</b>, and it has been a
+                    wonderful experience! (˶ᵔ ᵕ ᵔ˶)</p>
+            </div>
+
+
+            <!--AWARDS-->
+            <div class="timeline-item">
+                <h5> <img src="cat2.gif" alt="GIF Cat2" class="gif-container3"> We are champions in the "<b>Limbo
+                        Rack</b>" and "<b>Minute To Win It</b>" competitions during College Days at CCA.</h5>
+                <div class="carousel-container">
+                    <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="limbo1.jpg" class="d-block w-100" style="width: 100px; height: auto;"
+                                    alt="Limbo Rack 1.0 (Champion)">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="limbo2.jpg" class="d-block w-100" alt="Limbo Rack 1.1 (Champion)" style="width: 100px; height: auto;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <h3 class="font3">LIMBO RACK</h3>
+                    </div>
+
+                    <div id="carouselRight" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="minutetowinit1.jpg" class="d-block w-100"
+                                    alt="Minute To Win It 1.0 (Champion)">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="minutetowinit2.jpg" class="d-block w-100"
+                                    alt="Minute To Win It 1.1 (Champion)">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRight"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRight"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                        <h3 class="font3">MINUTE TO WIN IT</h3>
+                    </div>
+                </div>
+                <p class="font2 neon-text" style="margin-bottom: 5%;"> We recognized for our efforts in both <b>Limbo Rack</b> and
+                    <b>Minute To Win It</b>. I'm super proud of these moments!</p>
+
+                <!--HOBBIES-->
+                <div class="timeline-item mt-3">
+                    <h5><img src="taptapcat1.gif" alt="GIF Cat" style="width: 100px; height: auto;"> My hobbies are playing the <b>piano</b>, listening to <b>music</b>, and making <b>portraits</b>.</h5>
+                </div>
+                <div class="hobbies1">
+                    <img src="piano1.jpg" alt="My photo while playing the piano.">
+                    <img src="piano2.jpg" alt="This is a piano.">
+                </div>
+                <div class="hobbies2">
+                    <img src="chae.jpg" alt="Chaeyoung's photo." class="d-block">
+                    <img src="Portrait.jpg" alt="The portrait I made." class="d-block">
+                </div>
+                <p class="font4 neon-text">Fell in love with <b>playing the piano</b>, <b>making portraits</b>, and started
+                    working on amazing projects!</p>
+    </section>
+
+    <!--SKILLS-->
+    <section class="container my-5" id="skills">
+        <div class="spin-container">
+            <h2 class="text-center spin-text">MY SKILLS</h2>
+        </div>
+        <div class="card mb-2">
+            <p style="margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img src="html.png"
+                    alt="HTML icon" style="width: 40px; height: auto;"><b>HTML</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 90%">
+                    <b>90%</b></div>
+            </div>
+            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
+                    src="css.png" alt="CSS icon" style="width: 40px; height: auto;"><b>CSS</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 86%">
+                    <b>86%</b></div>
+            </div>
+            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
+                    src="javascript.png" alt="JavaScript icon" style="width: 40px; height: auto;"><b>JavaScript</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 50%">
+                    <b>50%</b></div>
+            </div>
+            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
+                src="c.png" alt="C icon" style="width: 40px; height: auto;"><b> C</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 86%">
+                    <b>86%</b></div>
+            </div>
+            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
+                src="c++.png" alt="C++ icon" style="width: 40px; height: auto;"><b> C++</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 84%">
+                    <b>84%</b></div>
+            </div>
+            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
+                src="java.png" alt="Java icon" style="width: 40px; height: auto;"><b> Java</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 89%">
+                    <b>89%</b></div>
+            </div>
+            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
+                src="python.png" alt="Python icon" style="width: 40px; height: auto;"><b> Python</b></p>
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 97%">
+                    <b>97%</b></div>
+        </div>
+    </section>
+
+    <!--1.0 MIDTERM PROJECTS-->
+    <section class="container my-5" id="midterm tasks">
+        <div class="spin-container">
+            <h2 class="text-center spin-text">MIDTERM TASKS</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Midterm Task 1 -->
+            <div class="project-card text-center">
+            <h3><b>Task 1: Data Cleaning and Preparation using Excel</b></h3>
+              <img src="midtermTask1.png" alt="Midterm Task 1 (Data Cleaning and Preparation using Excel)">
+              <p class="neon-text">This task involves working with a bike sales dataset containing customer and product information.</p>
+                                    
+              <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1qxkaRuORtKlK1gpF1A5-fuWJXiKmAAeV/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Midterm Task 1</a>
+              </div>
+            </div>
+            <!-- Midterm Task 2 -->
+            <div class="project-card text-center">
+            <h3><b>Task 2: Data Analysis using Pivot Table</b></h3>
+              <img src="midtermTask2.png" alt="Midterm Task 2 (Data Analysis using Pivot Table)">
+              <p class="neon-text">This task involves analyzing the cleaned sales dataset using Excel Pivot Tables and Charts.</p>
+              <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1i4a2RlbWHLk8vXw3LMC2v6tLtSn6Fx85/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Midterm Task 2</a>
+              </div>
+          </div>
+        </section>
+
+        <!--1.1 MIDTERM PROJECTS-->
+    <section class="container my-5" id="midterm tasks">
+        
+            <!-- Midterm Task 3 -->
+            <div class="project-card text-center">
+            <h3><b>Task 3: Data Prep and Cleaning and Modeling With Power Query</b></h3>
+              <img src="midtermTask3.png" alt="Midterm Task 3 (Data Prep and Cleaning and Modeling With Power Query)">
+              <p class="neon-text">This task involves working with an academic/school dataset containing student enrollment and course information</p>
+              <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1XomXi1ZavBNO05vuEvQJ98aRANEi1aLI/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Midterm Task 3</a>
+              </div>
+          </div>
+        </section>
+
+
+        <!--PRACTICE TASKS-->
+    <section class="container my-5" id="practice tasks">
+        <div class="spin-container">
+            <h2 class="text-center spin-text">PRACTICE TASKS</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Practice Task 1 -->
+            <div class="project-card text-center">
+            <h3><b>Practice 1: Sales Revenue Dataset</b></h3>
+              <img src="Practice/practice1.png" alt="Practice 1 (Sales Revenue Dataset)">
+              <p class="neon-text">This dataset contains business sales transaction records tracking client dealings across different departments, states, and payment methods. It includes financial metrics such as Revenue, Profit, and Profit Margin, making it suitable for sales performance analysis and reporting.</p>
+              <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/13gcI2p8vX2rUc7X_x8fYNW8FdT1NHjqa/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Practice 1</a>
+              </div>
+          </div>
+        </section>
+
+        <section class="container my-5" id="practice tasks">
+            <!-- Practice Task 2 -->
+            <div class="project-card text-center">
+            <h3><b>Practice 2: Sales DashBoard</b></h3>
+              <img src="Practice/practice2.png" alt="Practice 2 (Sales DashBoard)">
+              <p class="neon-text">An interactive Excel Sales Dashboard for Company A that visualizes key financial metrics — Total Revenue, Total Profit, Average Profit, and Average Profit Margin — with filterable charts showing State Revenue (bar chart) and Total Revenue per Month (pie chart) across California, Florida, New York, and Texas for Q2 2023.</p>
+              <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/11mHVujsrCN8_Y4prr0fG3D74V1A9H3r4/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Practice 2</a>
+              </div>
+          </div>
+        </section>
+
+        <section class="container my-5" id="practice tasks">
+            <!-- Practice Task 3 -->
+            <div class="project-card text-center">
+            <h3><b>Practice 3: Power Query</b></h3>
+              <img src="Practice/practice3.png" alt="Practice 3 (Power Query)">
+              <p class="neon-text">A data cleaning and transformation task using Power Query on a sales dataset containing order details such as Order ID, Order/Arrival Dates, Employee Name, Department, Region, Payment Type, Revenue, and Profit. The task involves cleaning inconsistencies like irregular name casing (e.g., "Bill SmITH", "KEN Singh") and handling duplicate records to produce a clean, analysis-ready dataset.</p>
+              <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1ofAkb1WL9gKTkiHxdOHGQ9Ljb0ZLQnSS/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Practice 3</a>
+              </div>
+          </div>
+        </section>
+        
+    <!--CONTACT-->
+    <section class="container my-5" id="contact">
+        <div class="spin-container">
+            <h2 class="text-center spin-text">CONTACT</h2>
+        </div>
+        <p class="text-center neon-text" style="font-size: large;">Feel free to reach out to me! Send me a message anytime.</p>
+        <div class="row justify-content-center">
+            <div class="card1 mb-2">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label" style="font-size: large; color: white;">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" style="font-size: large; color: white;">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label" style="font-size: large; color: white;">Subject</label>
+                        <input type="subject" class="form-control" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label" style="font-size: large; color: white;">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."
+                            required></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="glow-on-hover" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <h5 class="neon-text">Or connect with me on:</h5>
+            <a href="https://www.facebook.com/zowan0.0" target="_blank" class="social-icon"><img src="facebook.png"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com/_zowan" target="_blank" class="social-icon"><img src="instagram.png"
+                    alt="instagram"></a>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        &copy; 2026 Joan Crisel Gutierrez. All Rights Reserved.
+    </footer>
+</body>
+</html>
