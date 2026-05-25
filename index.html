@@ -3,312 +3,433 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="icon" type="png" href="favicon1.3.png">
+    <title>Joan Crisel Gutierrez | Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon1.3.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(https://i.pinimg.com/originals/17/f7/07/17f70709ccb40a1268681958f4cbe44c.gif);
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            font-family: 'bubble', cursive, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: #ffb6c1;
+        }
+        .navbar-brand {
+            color: #9f355d;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: #9f355d !important;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: #ff4d8c !important;
+            transform: scale(1.05);
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero img {
+            width: 25%;
+            height: auto;
+            border-radius: 15%;
+            box-shadow: 0 20px 30px rgba(255, 20, 147, 0.4);
+        }
+        .shadow-dance-text {
+            font-size: 4rem;
+            color: #fffffff3;
+            animation: shadow-dance 3s infinite;
+        }
+        @keyframes shadow-dance {
+            0%, 100% { text-shadow: 5px 5px 0 #e017b1, 10px 10px 0 #fc85cf; }
+            50% { text-shadow: -5px -5px 0 #fc85cf, -10px -10px 0 #e017b1; }
+        }
+
+        .neon-text {
+            font-size: 1.1rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px #f9ceff, 0 0 10px #f9ceff, 0 0 20px #f9ceff, 0 0 40px #f9ceff;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            40% { text-shadow: 0 0 10px #ff2fe3, 0 0 20px #ff2fe3, 0 0 40px #ff2fe3, 0 0 80px #ff2fe3; }
+            100% { text-shadow: 0 0 5px #86036e, 0 0 10px #86036e, 0 0 20px #86036e, 0 0 40px #86036e; }
+        }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            background: #4b4b4b;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin: 20px auto 0;
+        }
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #fd63c5, #990a0a, #785aff, #af4545, #ffb1ee, #ff00ee, #ff9501, #ff00c8, #ffffff);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .glow-on-hover:hover:before { opacity: 1; }
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+
+        .card {
+            background: url(https://i.pinimg.com/originals/c8/e2/5f/c8e25f6f7976b69bf2712f9143c6f9c1.gif);
+            background-size: 100%;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(255, 0, 174, 0.876);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover { transform: scale(1.02); }
+        .progress { height: 20px; border-radius: 10px; }
+        .progress-bar { background-color: #ff69b4 !important; }
+
+        .timeline {
+            background: url(https://i.pinimg.com/originals/c8/e2/5f/c8e25f6f7976b69bf2712f9143c6f9c1.gif);
+            background-size: 100%;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(255, 0, 174, 0.876);
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #ff69b4;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: white;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '\2022';
+            position: absolute;
+            left: -5px;
+            color: #ff69b4;
+            font-size: 20px;
+        }
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            flex-wrap: wrap;
+        }
+        .carousel { width: 300px; }
+        .gif-container {
+            display: block;
+            margin: 0 auto;
+            margin-top: -5%;
+            width: 15%;
+            height: auto;
+        }
+        .school {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            border-radius: 10%;
+        }
+        .font1, .font2, .font4 { color: #ffffff; font-size: large; }
+        .font3 { color: #ffffff; text-align: center; }
+
+        .hobbies1, .hobbies2 {
+            --g: 6px;
+            display: grid;
+            clip-path: inset(2px);
+        }
+        .hobbies1 > img, .hobbies2 > img {
+            --_p: calc(15*var(--g));
+            grid-area: 1/1;
+            width: 50%;
+            max-width: 150%;
+            height: auto;
+            justify-self: center;
+            cursor: pointer;
+            transition: .2s .1s;
+        }
+        .hobbies1 > img:first-child, .hobbies2 > img:first-child {
+            clip-path: polygon(0 0, calc(100% + var(--_p)) 0 , 0 calc(100% + var(--_p)));
+        }
+        .hobbies1 > img:last-child, .hobbies2 > img:last-child {
+            clip-path: polygon(100% 100%, 100% calc(0% - var(--_p)), calc(0% - var(--_p)) 100%);
+        }
+        .hobbies1:hover > img:last-child, .hobbies1:hover > img:first-child:hover,
+        .hobbies2:hover > img:last-child, .hobbies2:hover > img:first-child:hover {
+            --_p: calc(50% - var(--g));
+        }
+        .hobbies1:hover > img:first-child, .hobbies1:hover > img:first-child:hover + img,
+        .hobbies2:hover > img:first-child, .hobbies2:hover > img:first-child:hover + img {
+            --_p: calc(-50% - var(--g));
+        }
+
+        .spin-text {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #5b434d;
+            text-shadow: 1px 1px 0px #e639af, 2px 2px 0px #da97bf, 3px 3px 0px #f8d1e5, 4px 4px 0px #a30e51, 5px 5px 0px #98057d;
+            animation: spin-3d 7s infinite linear;
+            display: inline-block;
+        }
+        @keyframes spin-3d {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        .spin-container { text-align: center; margin-bottom: 20px; }
+
+        .social-icon img {
+            width: 40px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .social-icon img:hover { transform: scale(1.1); }
+
+        .card1 {
+            background: url(https://i.pinimg.com/originals/c8/e2/5f/c8e25f6f7976b69bf2712f9143c6f9c1.gif);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(255, 0, 174, 0.876);
+        }
+        .footer {
+            background-color: #ff8fab;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        .projects-btn {
+            background: #fc85cf;
+            padding: 12px 28px;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .projects-btn:hover {
+            background: #aa0069;
+            color: white;
+            transform: scale(1.03);
+        }
+        @media (max-width: 768px) {
+            .hero img { width: 70%; }
+            .spin-text { font-size: 2.5rem; }
+            .carousel-container { gap: 20px; }
+            .school { width: 90%; }
+        }
+    </style>
 </head>
-
 <body>
-    <!--NAVIGATION BAR-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar p-3 shadow-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#"><b>Joan Crisel Gutierrez</b></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!--PROFILE PICTURE AND BRIEF INTRODUCTION-->
-    <section class="hero container-fluid d-flex flex-column align-items-center justify-content-center" id="about">
-        <img src="My Selfie3.jpg" alt="Profile Pic" class="img-fluid">
-        <div class="shadow-dance-container">
-            <h1 class="shadow-dance-text">Hi, I'm Joan! <img src="cat1.gif" alt="GIF Cat 1"></h1>
-        </div>        
-        <div class="neon-container">
-            <h1 class="neon-text">Aspiring CS Student & UI Designer | Lover of cute things (˶ᵔ ᵕ ᵔ˶)</h1>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><b>Joan Crisel Gutierrez</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-main">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
         </div>
-        <button class="glow-on-hover" type="button" style="display: block; margin: 0 auto;">
-            <a class="nav-link" href="#achievements">Know More About Me!</a>
-          </button>
-    </section>
+    </div>
+</nav>
 
-    <!--ACHIEVEMENTS-->
-    <section class="container my-2" id="achievements">
+<section class="hero container-fluid d-flex flex-column align-items-center justify-content-center" id="home">
+    <img src="Selfie.jfif" alt="Profile Pic" class="img-fluid">
+    <div class="shadow-dance-container mt-3">
+        <h1 class="shadow-dance-text">Hi, I'm Joan! <img src="cat1.gif" alt="GIF Cat 1" style="width: 60px;"></h1>
+    </div>        
+    <div class="neon-container mt-2">
+        <h1 class="neon-text" style="font-size: 1.8rem;">Aspiring CS Student & UI Designer | Lover of cute things (˶ᵔ ᵕ ᵔ˶)</h1>
+    </div>
+    <button class="glow-on-hover" type="button">
+        <a class="nav-link" href="#about-main" style="color:white;">Know More About Me!</a>
+    </button>
+</section>
+
+<section class="container my-2" id="about-main">
+    <div style="position: relative;">
         <img src="cat.gif" alt="GIF Cat1" class="gif-container">
         <div class="spin-container">
-            <h2 class="text-center spin-text">MY ACHIEVEMENTS</h2>
+            <h2 class="spin-text">MY ACHIEVEMENTS</h2>
         </div>
-        <p class="text-center neon-text">Here's a little about me: My education, interests, and achievements!</p>
+        <p class="text-center neon-text" style="font-size: 1.3rem;">Here's a little about me: My education, interests, and achievements!</p>
+    </div>
 
-        <!--EDUCATION-->
-        <div class="timeline">
-            <div class="timeline-item">
-                <h5><img src="Girl Coding.gif" alt="GIF Girl Coding" class="gif-container2">I am currently studying at
-                    <b>City College of Angeles</b></h5>
-                <img src="CCA School.jpg" alt="CCA School" class="school">
-                <p class="font1 neon-text" style="margin-bottom: 5%;">I'm pursuing <b>Computer Science</b>, and it has been a
-                    wonderful experience! (˶ᵔ ᵕ ᵔ˶)</p>
-            </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h5><img src="Girl Coding.gif" alt="GIF Girl Coding" style="width: 100px;"> I am currently studying at <b>City College of Angeles</b></h5>
+            <img src="CCA School.jpg" alt="CCA School" class="school">
+            <p class="font1 neon-text" style="margin-bottom: 5%;">I'm pursuing <b>Computer Science</b>, and it has been a wonderful experience! (˶ᵔ ᵕ ᵔ˶)</p>
+        </div>
 
-
-            <!--AWARDS-->
-            <div class="timeline-item">
-                <h5> <img src="cat2.gif" alt="GIF Cat2" class="gif-container3"> We are champions in the "<b>Limbo
-                        Rack</b>" and "<b>Minute To Win It</b>" competitions during College Days at CCA.</h5>
-                <div class="carousel-container">
-                    <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="limbo1.jpg" class="d-block w-100" style="width: 100px; height: auto;"
-                                    alt="Limbo Rack 1.0 (Champion)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="limbo2.jpg" class="d-block w-100" alt="Limbo Rack 1.1 (Champion)" style="width: 100px; height: auto;">
-                            </div>
-                        </div>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <h3 class="font3">LIMBO RACK</h3>
+        <div class="timeline-item">
+            <h5> <img src="cat2.gif" alt="GIF Cat2" style="width: 100px; border-radius: 100px;"> We are champions in the "<b>Limbo Rack</b>" and "<b>Minute To Win It</b>" competitions during College Days at CCA.</h5>
+            <div class="carousel-container">
+                <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="limbo1.jpg" class="d-block w-100" alt="Limbo Rack 1.0"></div>
+                        <div class="carousel-item"><img src="limbo2.jpg" class="d-block w-100" alt="Limbo Rack 1.1"></div>
                     </div>
-
-                    <div id="carouselRight" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="minutetowinit1.jpg" class="d-block w-100"
-                                    alt="Minute To Win It 1.0 (Champion)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="minutetowinit2.jpg" class="d-block w-100"
-                                    alt="Minute To Win It 1.1 (Champion)">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRight"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRight"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                        <h3 class="font3">MINUTE TO WIN IT</h3>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    <h3 class="font3">LIMBO RACK</h3>
                 </div>
-                <p class="font2 neon-text" style="margin-bottom: 5%;"> We recognized for our efforts in both <b>Limbo Rack</b> and
-                    <b>Minute To Win It</b>. I'm super proud of these moments!</p>
-
-                <!--HOBBIES-->
-                <div class="timeline-item mt-3">
-                    <h5><img src="taptapcat1.gif" alt="GIF Cat" style="width: 100px; height: auto;"> My hobbies are playing the <b>piano</b>, listening to <b>music</b>, and making <b>portraits</b>.</h5>
+                <div id="carouselRight" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="minutetowinit1.jpg" class="d-block w-100" alt="Minute To Win It 1.0"></div>
+                        <div class="carousel-item"><img src="minutetowinit2.jpg" class="d-block w-100" alt="Minute To Win It 1.1"></div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRight" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRight" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    <h3 class="font3">MINUTE TO WIN IT</h3>
                 </div>
-                <div class="hobbies1">
-                    <img src="piano1.jpg" alt="My photo while playing the piano.">
-                    <img src="piano2.jpg" alt="This is a piano.">
+            </div>
+            <p class="font2 neon-text" style="margin-bottom: 5%;">We recognized for our efforts in both <b>Limbo Rack</b> and <b>Minute To Win It</b>. I'm genuinely proud of these moments.</p>
+        </div>
+
+        <div class="timeline-item mt-3">
+            <h5><img src="taptapcat1.gif" alt="GIF Cat" style="width: 100px;"> My hobbies are playing the <b>piano</b>, listening to <b>music</b>, and making <b>portraits</b>.</h5>
+        </div>
+        <div class="hobbies1">
+            <img src="piano1.jpg" alt="My photo while playing the piano.">
+            <img src="piano2.jpg" alt="This is a piano.">
+        </div>
+        <div class="hobbies2">
+            <img src="chae.jpg" alt="Chaeyoung's photo.">
+            <img src="Portrait.jpg" alt="The portrait I made.">
+        </div>
+        <p class="font4 neon-text mt-2">I spend my time <b>playing the piano</b>, <b>making portraits</b>, and trying new things beyond my comfort zone.</p>
+    </div>
+</section>
+
+<section class="container my-5" id="contact">
+    <div class="spin-container">
+        <h2 class="spin-text">CONTACT</h2>
+    </div>
+    <p class="text-center neon-text" style="font-size: large;">Feel free to reach out to me! Send me a message anytime.</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8 card1">
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label" style="color: white;">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                 </div>
-                <div class="hobbies2">
-                    <img src="chae.jpg" alt="Chaeyoung's photo." class="d-block">
-                    <img src="Portrait.jpg" alt="The portrait I made." class="d-block">
+                <div class="mb-3">
+                    <label for="email" class="form-label" style="color: white;">Your Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
                 </div>
-                <p class="font4 neon-text">Fell in love with <b>playing the piano</b>, <b>making portraits</b>, and started
-                    working on amazing projects!</p>
-    </section>
-
-    <!--SKILLS-->
-    <section class="container my-5" id="skills">
-        <div class="spin-container">
-            <h2 class="text-center spin-text">MY SKILLS</h2>
+                <div class="mb-3">
+                    <label for="subject" class="form-label" style="color: white;">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label" style="color: white;">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Type your message..." required></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button class="glow-on-hover" type="submit" style="background: #ff69b4;">Send Message</button>
+                </div>
+            </form>
         </div>
-        <div class="card mb-2">
-            <p style="margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img src="html.png"
-                    alt="HTML icon" style="width: 40px; height: auto;"><b>HTML</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 90%">
-                    <b>90%</b></div>
-            </div>
-            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
-                    src="css.png" alt="CSS icon" style="width: 40px; height: auto;"><b>CSS</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 86%">
-                    <b>86%</b></div>
-            </div>
-            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
-                    src="javascript.png" alt="JavaScript icon" style="width: 40px; height: auto;"><b>JavaScript</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 50%">
-                    <b>50%</b></div>
-            </div>
-            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
-                src="c.png" alt="C icon" style="width: 40px; height: auto;"><b> C</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 86%">
-                    <b>86%</b></div>
-            </div>
-            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
-                src="c++.png" alt="C++ icon" style="width: 40px; height: auto;"><b> C++</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 84%">
-                    <b>84%</b></div>
-            </div>
-            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
-                src="java.png" alt="Java icon" style="width: 40px; height: auto;"><b> Java</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 89%">
-                    <b>89%</b></div>
-            </div>
-            <p style="margin-top: 2%; margin-bottom: 0%; font-family: 'Courier New', Courier, monospace;"><img
-                src="python.png" alt="Python icon" style="width: 40px; height: auto;"><b> Python</b></p>
-            <div class="progress" style="height:20px;">
-                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 97%">
-                    <b>97%</b></div>
-        </div>
-    </section>
+    </div>
+    <div class="text-center mt-4">
+        <h5 class="neon-text">Or connect with me on:</h5>
+        <a href="https://www.facebook.com/zowan0.0" target="_blank" class="social-icon"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/_zowan" target="_blank" class="social-icon"><img src="instagram.png" alt="instagram"></a>
+    </div>
+</section>
 
-    <!--1.0 MIDTERM PROJECTS-->
-    <section class="container my-5" id="midterm tasks">
-        <div class="spin-container">
-            <h2 class="text-center spin-text">MIDTERM TASKS</h2>
-        </div>
-        <div class="projects-grid">
-            <!-- Midterm Task 1 -->
-            <div class="project-card text-center">
-            <h3><b>Task 1: Data Cleaning and Preparation using Excel</b></h3>
-              <img src="midtermTask1.png" alt="Midterm Task 1 (Data Cleaning and Preparation using Excel)">
-              <p class="neon-text">This task involves working with a bike sales dataset containing customer and product information.</p>
-                                    
-              <div class="btn-group">
-                <a href="https://docs.google.com/spreadsheets/d/1qxkaRuORtKlK1gpF1A5-fuWJXiKmAAeV/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Midterm Task 1</a>
-              </div>
-            </div>
-            <!-- Midterm Task 2 -->
-            <div class="project-card text-center">
-            <h3><b>Task 2: Data Analysis using Pivot Table</b></h3>
-              <img src="midtermTask2.png" alt="Midterm Task 2 (Data Analysis using Pivot Table)">
-              <p class="neon-text">This task involves analyzing the cleaned sales dataset using Excel Pivot Tables and Charts.</p>
-              <div class="btn-group">
-                <a href="https://docs.google.com/spreadsheets/d/1i4a2RlbWHLk8vXw3LMC2v6tLtSn6Fx85/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Midterm Task 2</a>
-              </div>
-          </div>
-        </section>
+<footer class="footer">
+    &copy; 2026 Joan Crisel Gutierrez. All Rights Reserved.
+</footer>
 
-        <!--1.1 MIDTERM PROJECTS-->
-    <section class="container my-5" id="midterm tasks">
-        
-            <!-- Midterm Task 3 -->
-            <div class="project-card text-center">
-            <h3><b>Task 3: Data Prep and Cleaning and Modeling With Power Query</b></h3>
-              <img src="midtermTask3.png" alt="Midterm Task 3 (Data Prep and Cleaning and Modeling With Power Query)">
-              <p class="neon-text">This task involves working with an academic/school dataset containing student enrollment and course information</p>
-              <div class="btn-group">
-                <a href="https://docs.google.com/spreadsheets/d/1XomXi1ZavBNO05vuEvQJ98aRANEi1aLI/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Midterm Task 3</a>
-              </div>
-          </div>
-        </section>
-
-
-        <!--PRACTICE TASKS-->
-    <section class="container my-5" id="practice tasks">
-        <div class="spin-container">
-            <h2 class="text-center spin-text">PRACTICE TASKS</h2>
-        </div>
-        <div class="projects-grid">
-            <!-- Practice Task 1 -->
-            <div class="project-card text-center">
-            <h3><b>Practice 1: Sales Revenue Dataset</b></h3>
-              <img src="practice1.png" alt="Practice 1 (Sales Revenue Dataset)">
-              <p class="neon-text">This dataset contains business sales transaction records tracking client dealings across different departments, states, and payment methods. It includes financial metrics such as Revenue, Profit, and Profit Margin, making it suitable for sales performance analysis and reporting.</p>
-              <div class="btn-group">
-                <a href="https://docs.google.com/spreadsheets/d/13gcI2p8vX2rUc7X_x8fYNW8FdT1NHjqa/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Practice 1</a>
-              </div>
-          </div>
-        </section>
-
-        <section class="container my-5" id="practice tasks">
-            <!-- Practice Task 2 -->
-            <div class="project-card text-center">
-            <h3><b>Practice 2: Sales DashBoard</b></h3>
-              <img src="practice2.png" alt="Practice 2 (Sales DashBoard)">
-              <p class="neon-text">An interactive Excel Sales Dashboard for Company A that visualizes key financial metrics — Total Revenue, Total Profit, Average Profit, and Average Profit Margin — with filterable charts showing State Revenue (bar chart) and Total Revenue per Month (pie chart) across California, Florida, New York, and Texas for Q2 2023.</p>
-              <div class="btn-group">
-                <a href="https://docs.google.com/spreadsheets/d/11mHVujsrCN8_Y4prr0fG3D74V1A9H3r4/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Practice 2</a>
-              </div>
-          </div>
-        </section>
-
-        <section class="container my-5" id="practice tasks">
-            <!-- Practice Task 3 -->
-            <div class="project-card text-center">
-            <h3><b>Practice 3: Power Query</b></h3>
-              <img src="practice3.png" alt="Practice 3 (Power Query)">
-              <p class="neon-text">A data cleaning and transformation task using Power Query on a sales dataset containing order details such as Order ID, Order/Arrival Dates, Employee Name, Department, Region, Payment Type, Revenue, and Profit. The task involves cleaning inconsistencies like irregular name casing (e.g., "Bill SmITH", "KEN Singh") and handling duplicate records to produce a clean, analysis-ready dataset.</p>
-              <div class="btn-group">
-                <a href="https://docs.google.com/spreadsheets/d/1ofAkb1WL9gKTkiHxdOHGQ9Ljb0ZLQnSS/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">Practice 3</a>
-              </div>
-          </div>
-        </section>
-        
-    <!--CONTACT-->
-    <section class="container my-5" id="contact">
-        <div class="spin-container">
-            <h2 class="text-center spin-text">CONTACT</h2>
-        </div>
-        <p class="text-center neon-text" style="font-size: large;">Feel free to reach out to me! Send me a message anytime.</p>
-        <div class="row justify-content-center">
-            <div class="card1 mb-2">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label" style="font-size: large; color: white;">Your Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label" style="font-size: large; color: white;">Your Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label" style="font-size: large; color: white;">Subject</label>
-                        <input type="subject" class="form-control" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label" style="font-size: large; color: white;">Your Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."
-                            required></textarea>
-                    </div>
-                    <div style="text-align: center;">
-                        <button class="glow-on-hover" type="submit">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="text-center mt-4">
-            <h5 class="neon-text">Or connect with me on:</h5>
-            <a href="https://www.facebook.com/zowan0.0" target="_blank" class="social-icon"><img src="facebook.png"
-                    alt="Facebook"></a>
-            <a href="https://www.instagram.com/_zowan" target="_blank" class="social-icon"><img src="instagram.png"
-                    alt="instagram"></a>
-        </div>
-    </section>
-
-    <!--FOOTER-->
-    <footer class="footer">
-        &copy; 2026 Joan Crisel Gutierrez. All Rights Reserved.
-    </footer>
+<script>
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('✨ Thank you for reaching out! I will get back to you soon. ✨');
+        this.reset();
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === "#" || targetId === "") return;
+            const targetElem = document.querySelector(targetId);
+            if(targetElem) {
+                e.preventDefault();
+                targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
 </body>
 </html>

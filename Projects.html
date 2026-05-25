@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joan Crisel Gutierrez | Projects</title>
+    <link rel="icon" type="image/png" href="favicon1.3.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background: url(https://i.pinimg.com/originals/17/f7/07/17f70709ccb40a1268681958f4cbe44c.gif);
+            background-size: contain;
+            font-family: 'bubble', cursive, sans-serif;
+        }
+        .navbar {
+            background-color: #ffb6c1;
+        }
+        .navbar-brand {
+            color: #9f355d;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #9f355d !important;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: #ff4d8c !important;
+        }
+        .spin-text {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #5b434d;
+            text-shadow: 1px 1px 0px #e639af, 2px 2px 0px #da97bf, 3px 3px 0px #f8d1e5, 4px 4px 0px #a30e51, 5px 5px 0px #98057d;
+            animation: spin-3d 7s infinite linear;
+            display: inline-block;
+        }
+        @keyframes spin-3d {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        .spin-container {
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 100px;
+        }
+        .projects-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            padding: 20px;
+        }
+        .project-card {
+            background: url(https://i.pinimg.com/originals/c8/e2/5f/c8e25f6f7976b69bf2712f9143c6f9c1.gif);
+            background-size: cover;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(255, 0, 174, 0.876);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            margin: 15px 0 10px;
+            color: #fc85cf;
+        }
+        .project-card p {
+            color: #ffffff;
+        }
+        .btn-group a {
+            text-decoration: none;
+            padding: 8px 18px;
+            margin: 5px;
+            border-radius: 8px;
+            background: #fc85cf;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .btn-group a:hover {
+            background: #aa0069;
+        }
+        .back-home {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background: #fc85cf;
+            color: white;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background: #aa0069;
+            color: white;
+        }
+        .footer {
+            background-color: #ff8fab;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .spin-text { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><b>Joan Crisel Gutierrez</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about-main">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="spin-container">
+        <h2 class="spin-text">MIDTERM TASKS</h2>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3><b>Task 1: Data Cleaning and Preparation using Excel</b></h3>
+            <img src="midtermTask1.png" alt="Midterm Task 1">
+            <p>This task involves working with a bike sales dataset containing customer and product information.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1qxkaRuORtKlK1gpF1A5-fuWJXiKmAAeV/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Task 1</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Task 2: Data Analysis using Pivot Table</b></h3>
+            <img src="midtermTask2.png" alt="Midterm Task 2">
+            <p>This task involves analyzing the cleaned sales dataset using Excel Pivot Tables and Charts.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1i4a2RlbWHLk8vXw3LMC2v6tLtSn6Fx85/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Task 2</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Task 3: Data Prep and Cleaning and Modeling With Power Query</b></h3>
+            <img src="midtermTask3.png" alt="Midterm Task 3">
+            <p>This task involves working with an academic/school dataset containing student enrollment and course information.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1XomXi1ZavBNO05vuEvQJ98aRANEi1aLI/edit?usp=sharing&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Task 3</a>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="spin-container">
+        <h2 class="spin-text">FINAL TASKS</h2>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3><b>Task 1: Using SQL to Clean and Analyze Data.</b></h3>
+        
+            <img src="finalTask1.png" alt="Final Task 1">
+            <p>This task involves using SQL (Structured Query Language) to prepare, clean, and analyze a call center dataset.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1PJs-ffzvAGVzY97Ggj29WuDC9qRBo9Aq/view?usp=sharing" target="_blank">View Task 1</a>
+            </div>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1kBpueXVK380Q_f54-kqV6qIHMPk9u_kU/view?usp=sharing" target="_blank">View Code for SQL</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Task 2: Working and Navigating through Power BI</b></h3>
+            <img src="finalTask2 (Output 1-Dashboard).png" alt="Final Task 2">
+            <p>(See the Dashboard above)</p>
+            <img src="finalTask2 (Output 2-Data Model).png" alt="Final Task 2">
+            <p>This task focuses on the end-to-end Power BI workflow, including data preparation, modeling, analysis, and visualization.</p>
+            <p>(See the Data Model above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/document/d/1yf4bkFIOPSqLOkpyIQs61r9KVkZkajbG/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Task 2</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Task 3: Using Dax Time Intelligence Function</b></h3>
+            <img src="finalTask3.png" alt="Final Task 3">
+            <p>(See the Data Model above)</p>
+            <img src="finalTask3.1.png" alt="Final Task 3">
+            <p>This task introduces DAX time intelligence functions to create measures that manipulate filter contexts involving dates.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1vSsu24UUaf0wYlPfgM1ZpmfK-Urmwg9L/view?usp=drive_link" target="_blank">View Task 3</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Task 4: Data Prep and Cleaning and Modeling With Power Query</b></h3>
+            <img src="finalTask4 (Output1).png" alt="Final Task 4">
+            <p>This is the first design for report page (Overview).</p>
+            <p>(See the output above)</p>
+            <img src="finalTask4 (Output2).png" alt="Final Task 4">
+            <p>This is the second design for report page (Profit).</p>
+            <p>(See the output above)</p>
+            <img src="finalTask4 (Output3).png" alt="Final Task 4">
+            <p>This is the third design for report page (My Performance).</p>
+            <p>This task involves creating a three-page interactive report in Power BI Desktop, then publishing it to the Power BI service.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1XE8dJ0h-sm0QEVgBfXMRu3ubqXap84gE/view?usp=drive_link" target="_blank">View Task 4</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="spin-container">
+        <h2 class="spin-text">PRACTICE TASKS</h2>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3><b>Practice 1: Sales Revenue Dataset</b></h3>
+            <img src="practice1.png" alt="Practice 1">
+            <p>This dataset contains business sales transaction records tracking client dealings across different departments, states, and payment methods.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/13gcI2p8vX2rUc7X_x8fYNW8FdT1NHjqa/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Practice 1</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Practice 2: Sales Dashboard</b></h3>
+            <img src="practice2.png" alt="Practice 2">
+            <p>An interactive Excel Sales Dashboard for Company A that visualizes key financial metrics with filterable charts.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/11mHVujsrCN8_Y4prr0fG3D74V1A9H3r4/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Practice 2</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3><b>Practice 3: Power Query</b></h3>
+            <img src="practice3.png" alt="Practice 3">
+            <p>A data cleaning and transformation task using Power Query on a sales dataset containing order details.</p>
+            <p>(See the output above)</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/spreadsheets/d/1ofAkb1WL9gKTkiHxdOHGQ9Ljb0ZLQnSS/edit?usp=drive_link&ouid=113255781339829692416&rtpof=true&sd=true" target="_blank">View Practice 3</a>
+            </div>
+
+        
+        
